@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% load static %}
+{% block content %}
+<style>
+    table
+    {
+    color:white;
+    }
+    h1
+    {
+    color:white;
+    }
+</style>
+<center>
+<h1>Update</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+  <input type="submit" >
+</form>
+</center>
+{% endblock %}

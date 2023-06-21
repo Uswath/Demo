@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<center>
+<h1>Student Details</h1>
+    <table class="table table-bordered">
+        <tr>
+        <th>First_name</th>
+        <th>Last_name</th>
+        <th>Age</th>
+            <th>Place</th>
+        </tr>
+        {% for i in student %}
+        <tr>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.place}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+
+<h2> STUDENT DETAILS</h2>
+<ol>
+   {% for i in student %}
+   <li>{{'Student Details'}}</li>
+   <ul>
+      <li>first_name&nbsp;&nbsp;&nbsp;{{i.first_name}}</li>
+      <li>last_name&nbsp;&nbsp;{{i.last_name}}</li>
+      <li>age&nbsp;&nbsp;&nbsp;{{i.age}}</li>
+       <li>place&nbsp;&nbsp;{{i.place}}</li>
+   </ul>-
+    {% endfor %}
+</ol>
+
+{% endblock %}

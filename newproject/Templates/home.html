@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/a.css' %}">
+
+</head>
+<body>
+<center>
+    <h1>WELCOME TO MY SITE</h1>
+    <img src="{% static 'images/x.jpg' %}">
+    <a href="{% url 'app2:first' %}">LINK TO FIRST PAGE</a>
+    <a href="{% url 'app1:index' %}">LINK TO INDEX PAGE</a>
+    <a href="{% url 'app2:second' %}">LINK TO SECOND PAGE</a>
+</center>
+</body>
+</html>

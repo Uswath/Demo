@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+
+{% load static %}
+{% block content %}
+<center>
+<div class="col-md-4">
+<div class="card" style="width: 19rem;height:600px;">
+  <img src="{{s.img.url}}" height="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{s.title}}</h5>
+    <p class="card-text">{{s.description}}</p>
+    <a href="{% url 'movie1:update' s.id %}" class="btn btn-secondary">Update</a>
+      <a href="{% url 'movie1:delete' s.id %}" class="btn btn-danger">Delete</a>
+  </div>
+</div>
+</div>
+    </center>
+
+{% endblock %}
