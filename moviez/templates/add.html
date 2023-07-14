@@ -1,5 +1,4 @@
 {% extends 'home.html' %}
-
 {% load static %}
 {% block content %}
 <!---
@@ -23,7 +22,7 @@
   <input type="submit" >
 </form>
     </center>-->
-
+<h1>Add</h1>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{form.as_p}}
